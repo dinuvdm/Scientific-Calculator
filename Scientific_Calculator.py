@@ -87,20 +87,13 @@ class Calc():
 		self.current = math.pi
 		self.display(self.current)
 
-	def tau(self):
-		self.result = False
-		self.current = math.tau
-		self.display(self.current)
+
 
 	def e(self):
 		self.result = False
 		self.current = math.e
 		self.display(self.current)
 
-	def mathPM(self):
-		self.result = False
-		self.current = -(float(txtDisplay.get()))
-		self.display(self.current)
 
 	def squared(self):
 		self.result = False
@@ -112,30 +105,18 @@ class Calc():
 		self.current = math.cos(math.radians(float(txtDisplay.get())))
 		self.display(self.current)
 
-	def cosh(self):
-		self.result = False
-		self.current = math.cosh(math.radians(float(txtDisplay.get())))
-		self.display(self.current)
 
 	def tan(self):
 		self.result = False
 		self.current = math.tan(math.radians(float(txtDisplay.get())))
 		self.display(self.current)
 
-	def tanh(self):
-		self.result = False
-		self.current = math.tanh(math.radians(float(txtDisplay.get())))
-		self.display(self.current)
 
 	def sin(self):
 		self.result = False
 		self.current = math.sin(math.radians(float(txtDisplay.get())))
 		self.display(self.current)
 
-	def sinh(self):
-		self.result = False
-		self.current = math.sinh(math.radians(float(txtDisplay.get())))
-		self.display(self.current)
 
 	def log(self):
 		self.result = False
@@ -147,25 +128,7 @@ class Calc():
 		self.current = math.exp(float(txtDisplay.get()))
 		self.display(self.current)
 
-	def acosh(self):
-		self.result = False
-		self.current = math.acosh(float(txtDisplay.get()))
-		self.display(self.current)
 
-	def asinh(self):
-		self.result = False
-		self.current = math.asinh(float(txtDisplay.get()))
-		self.display(self.current)
-
-	def expm1(self):
-		self.result = False
-		self.current = math.expm1(float(txtDisplay.get()))
-		self.display(self.current)
-
-	def lgamma(self):
-		self.result = False
-		self.current = math.lgamma(float(txtDisplay.get()))
-		self.display(self.current)
 
 	def degrees(self):
 		self.result = False
@@ -365,12 +328,6 @@ lblDisplay = Label(calc, text = "Scientific Calculator",
 
 lblDisplay.grid(row=0, column= 4,columnspan=4)
 
-def iExit():
-	iExit = tkinter.messagebox.askyesno("Scientific Calculator",
-										"Do you want to exit ?")
-	if iExit>0:
-		mster.destroy()
-		return
 
 def Scientific():
 	mster.resizable(width=False, height=False)
