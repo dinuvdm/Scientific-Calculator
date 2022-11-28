@@ -2,12 +2,12 @@ from tkinter import *
 import math
 import tkinter.messagebox
 
-root = Tk()
-root.title("Scientific Calculator")
-root.configure(background = 'orange')
-root.resizable(width=False, height=False)
-root.geometry("480x568+450+90")
-calc = Frame(root)
+mster = Tk()
+mster.title("Scientific Calculator")
+mster.configure(background = 'Orange')
+mster.resizable(width=False, height=False)
+mster.geometry("480x568+450+90")
+calc = Frame(mster)
 calc.grid()
 
 class Calc():
@@ -406,36 +406,15 @@ def iExit():
 	iExit = tkinter.messagebox.askyesno("Scientific Calculator",
 										"Do you want to exit ?")
 	if iExit>0:
-		root.destroy()
+		mster.destroy()
 		return
 
 def Scientific():
-	root.resizable(width=False, height=False)
-	root.geometry("944x568+0+0")
+	mster.resizable(width=False, height=False)
+	mster.geometry("944x568+0+0")
 
 
-def Standard():
-	root.resizable(width=False, height=False)
-	root.geometry("480x568+0+0")
 
-menubar = Menu(calc)
+mster.config(Scientific())
 
-# ManuBar 1 :
-filemenu = Menu(menubar, tearoff = 0)
-menubar.add_cascade(label = 'File', menu = filemenu)
-filemenu.add_command(label = "Standard", command = Standard)
-filemenu.add_command(label = "Scientific", command = Scientific)
-filemenu.add_separator()
-filemenu.add_command(label = "Exit", command = iExit)
-
-# ManuBar 2 :
-editmenu = Menu(menubar, tearoff = 0)
-menubar.add_cascade(label = 'Edit', menu = editmenu)
-editmenu.add_command(label = "Cut")
-editmenu.add_command(label = "Copy")
-editmenu.add_separator()
-editmenu.add_command(label = "Paste")
-
-root.config(menu=menubar)
-
-root.mainloop()
+mster.mainloop()
