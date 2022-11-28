@@ -4,7 +4,7 @@ import tkinter.messagebox
 
 mster = Tk()
 mster.title("Scientific Calculator")
-mster.configure(background = '')
+mster.configure(background = 'Orange')
 mster.resizable(width=False, height=False)
 mster.geometry("480x568+450+90")
 calc = Frame(mster)
@@ -23,7 +23,6 @@ class Calc():
 		self.result=False
 		firstnum=txtDisplay.get()
 		secondnum=str(num)
-		length = len(secondnum)
 		if self.input_value:
 			self.current = secondnum
 			self.input_value=False
@@ -81,6 +80,7 @@ class Calc():
 	def All_Clear_Entry(self):
 		self.Clear_Entry()
 		self.total=0
+
 
 	def pi(self):
 		self.result = False
