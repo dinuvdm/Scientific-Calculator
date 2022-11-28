@@ -87,13 +87,15 @@ class Calc():
 		self.current = math.pi
 		self.display(self.current)
 
-
-
 	def e(self):
 		self.result = False
 		self.current = math.e
 		self.display(self.current)
 
+	def mathPM(self):
+		self.result = False
+		self.current = -(float(txtDisplay.get()))
+		self.display(self.current)
 
 	def squared(self):
 		self.result = False
@@ -327,6 +329,7 @@ lblDisplay = Label(calc, text = "Scientific Calculator",
 				bg='black',fg='white',justify=CENTER)
 
 lblDisplay.grid(row=0, column= 4,columnspan=4)
+
 
 
 def Scientific():
