@@ -4,7 +4,7 @@ import tkinter.messagebox
 
 mster = Tk()
 mster.title("Scientific Calculator")
-mster.configure(background = 'Orange')
+mster.configure(background = '')
 mster.resizable(width=False, height=False)
 mster.geometry("480x568+450+90")
 calc = Frame(mster)
@@ -23,7 +23,7 @@ class Calc():
 		self.result=False
 		firstnum=txtDisplay.get()
 		secondnum=str(num)
-		if self.input_value:
+		if self.input_value<=8:
 			self.current = secondnum
 			self.input_value=False
 		else:
