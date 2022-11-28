@@ -23,7 +23,8 @@ class Calc():
 		self.result=False
 		firstnum=txtDisplay.get()
 		secondnum=str(num)
-		if self.input_value<=8:
+		length = len(secondnum)
+		if self.input_value:
 			self.current = secondnum
 			self.input_value=False
 		else:
@@ -296,31 +297,12 @@ btnsin = Button(calc, text="sin",width=6,
 				font=('Helvetica',20,'bold'),
 				bd=4,command=added_value.sin
 			).grid(row=1, column= 7, pady = 1)
-
-# ROW 2 :
-btn2Pi = Button(calc, text="2pi",width=6,
+#Row 2:
+btnerr = Button(calc, text="ERR",width=6,
 				height=2,bg='black',fg='white',
 				font=('Helvetica',20,'bold'),
-				bd=4,command=added_value.tau
-			).grid(row=2, column= 4, pady = 1)
-
-btnCosh = Button(calc, text="Cosh",width=6,
-				height=2,bg='black',fg='white',
-				font=('Helvetica',20,'bold'),
-				bd=4,command=added_value.cosh
-				).grid(row=2, column= 5, pady = 1)
-
-btntanh = Button(calc, text="tanh",width=6,
-				height=2,bg='black',fg='white',
-				font=('Helvetica',20,'bold'),
-				bd=4,command=added_value.tanh
-				).grid(row=2, column= 6, pady = 1)
-
-btnsinh = Button(calc, text="sinh",width=6,
-				height=2,bg='black',fg='white',
-				font=('Helvetica',20,'bold'),
-				bd=4,command=added_value.sinh
-				).grid(row=2, column= 7, pady = 1)
+				bd=4,command=added_value.sin
+			).grid(row=1, column= 7, pady = 1)
 
 # ROW 3 :
 btnlog = Button(calc, text="log",width=6,
@@ -360,17 +342,8 @@ btncos = Button(calc, text="log1p",width=6,
 				bd=4,command=added_value.log1p
 				).grid(row=4, column= 5, pady = 1)
 
-btnexpm1 = Button(calc, text="expm1",width=6,
-				height=2,bg='black',fg='white',
-				font=('Helvetica',20,'bold'),
-				bd = 4,command=added_value.expm1
-				).grid(row=4, column= 6, pady = 1)
 
-btngamma = Button(calc, text="gamma",width=6,
-				height=2,bg='black',fg='white',
-				font=('Helvetica',20,'bold'),
-				bd=4,command=added_value.lgamma
-				).grid(row=4, column= 7, pady = 1)
+
 # ROW 5 :
 btnlog2 = Button(calc, text="log2",width=6,
 				height=2,bg='black',fg='white',
@@ -384,17 +357,7 @@ btndeg = Button(calc, text="deg",width=6,
 				bd=4,command=added_value.degrees
 			).grid(row=5, column= 5, pady = 1)
 
-btnacosh = Button(calc, text="acosh",width=6,
-				height=2,bg='black',fg='white',
-				font=('Helvetica',20,'bold'),
-				bd=4,command=added_value.acosh
-				).grid(row=5, column= 6, pady = 1)
 
-btnasinh = Button(calc, text="asinh",width=6,
-				height=2,bg='black',fg='white',
-				font=('Helvetica',20,'bold'),
-				bd=4,command=added_value.asinh
-				).grid(row=5, column= 7, pady = 1)
 
 lblDisplay = Label(calc, text = "Scientific Calculator",
 				font=('Helvetica',30,'bold'),
