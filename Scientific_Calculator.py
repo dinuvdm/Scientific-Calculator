@@ -1,7 +1,9 @@
+#defined the libraries required to design calculator:
 from tkinter import *
 import math
 import tkinter.messagebox
 
+#Designed the frame for calculator:
 mster = Tk()
 mster.title("Scientific Calculator")
 mster.configure(background = 'Orange')
@@ -10,6 +12,7 @@ mster.geometry("480x568+450+90")
 calc = Frame(mster)
 calc.grid()
 
+#Defined the Class function and  individual functions to perform various mathematical operations:
 class Calc():
 	def __init__(self):
 		self.total=0
@@ -154,11 +157,15 @@ class Calc():
 
 added_value = Calc()
 
+#Displays the selected number on the screen:
+
 txtDisplay = Entry(calc, font=('Helvetica',20,'bold'),
 				bg='black',fg='white',
 				bd=30,width=28,justify=RIGHT)
 txtDisplay.grid(row=0,column=0, columnspan=4, pady=1)
 txtDisplay.insert(0,"0")
+
+#Alligned  all the buttons in a row order
 
 numberpad = "789456123"
 i=0
@@ -331,13 +338,16 @@ lblDisplay = Label(calc, text = "Scientific Calculator",
 lblDisplay.grid(row=0, column= 4,columnspan=4)
 
 
+#Function to provide scientific operations in a calculator:
 
 def Scientific():
 	mster.resizable(width=False, height=False)
 	mster.geometry("944x568+0+0")
 
 
+#Invoking the scientific operations in calculator:
 
 mster.config(Scientific())
 
+#Invoking the main loop to start the execution.
 mster.mainloop()
