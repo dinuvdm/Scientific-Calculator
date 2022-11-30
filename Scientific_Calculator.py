@@ -350,4 +350,5 @@ def Scientific():
 mster.config(Scientific())
 
 #Invoking the main loop to start the execution.
+#Main loop
 mster.mainloop()
